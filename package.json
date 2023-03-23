@@ -1,0 +1,24 @@
+{
+	"name": "espacio",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"astro": "^2.0.15",
+		"astro-icon": "^0.8.0",
+		"eventemitter3": "^5.0.0",
+		"gsap": "^3.11.4",
+		"sass": "^1.58.3",
+		"three": "^0.150.1"
+	},
+	"devDependencies": {
+		"vite-plugin-glsl": "^1.1.2",
+		"vite-plugin-imagemin": "^0.6.1"
+	}
+}
