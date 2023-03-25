@@ -1,0 +1,28 @@
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.item:not(:last-of-type) {
+  margin: 0 24px 0 0;
+}
+
+.btn {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $color-white;
+  cursor: pointer;
+}

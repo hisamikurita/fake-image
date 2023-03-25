@@ -1,32 +1,38 @@
 import { Plane } from './webgl/plane'
+import { gsap } from 'gsap';
+import { DEVICE } from './constants';
 
-// parallax
+const canvas = document.querySelector('.webgl canvas')
+const plane = new Plane(canvas);
 
-const canvasEls = document.querySelectorAll('.js-parallax canvas')
+// init
+plane.init();
 
-canvasEls.forEach((canvas) => {
-  // init
-  const image = canvas.dataset.image;
-  const imageMap = canvas.dataset.map;
-  const plane = new Plane(canvas, image, imageMap);
-  plane.init();
+// raf
+const raf = () => {
+  plane.onRaf()
+}
+gsap.ticker.add(raf)
 
-  // observe
-  // new IntersectionObserver(entries => {
-  //   entries.forEach(entry => {
-  //     if (entry.isIntersecting) {
-  //       plane.onEnter();
-  //     }
-  //     else {
-  //       plane.onLeave();
-  //     }
-  //   });
-  // }, {
-  //   rootMargin: '0%',
-  // }).observe(canvas);
+// loop
+if(!DEVICE.isSp()){
+  plane.randomPosition()
+  setInterval(() => {
+    plane.randomPosition()
+  }, 3000)  
+}
 
-  // resize
-  window.addEventListener('resize', () => {
-    plane.onResize()
-  })
+// mouse
+if(!DEVICE.isSp()) window.addEventListener('mousemove', (e) => {
+  plane.onMouseMove(e)
+})
+
+// deviceorientation
+if(DEVICE.isSp()) window.addEventListener("deviceorientation", (dat) => {
+  plane.onDeviceorientation(dat)
+});
+
+// resize
+window.addEventListener('resize', () => {
+  plane.onResize()
 })

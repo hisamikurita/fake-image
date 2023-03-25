@@ -1,8 +1,14 @@
+/*
+reference
+https://github.com/akella/fake3d/blob/master/js/shaders/fragment.glsl
+*/
+
 precision mediump float;
 
 uniform vec2 u_meshsize;
 uniform vec2 u_texturesize;
-uniform vec2 u_mouse;
+uniform vec2 u_event;
+uniform float u_power;
 uniform sampler2D u_texture;
 uniform sampler2D u_textureMap;
 varying vec2 vUv;
@@ -24,9 +30,9 @@ void main() {
     uv *= ratio;
     uv += 0.5;
 
-    float power = 0.028;
+    float power = u_power * 0.01;
     vec4 depth = texture2D(u_textureMap, uv);
-    vec2 fakeUv = uv + u_mouse * power * (depth.r - 0.50);
+    vec2 fakeUv = uv + u_event * power * (depth.r - 0.50);
     vec4 texture = texture2D(u_texture, mirrored(fakeUv));
 
     gl_FragColor = vec4(texture);
