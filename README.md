@@ -2,7 +2,7 @@
 
 ● [DEMO](https://hisamikurita.github.io/fake-image/)
 
-<img width="1272" alt="ogp" src="https://user-images.githubusercontent.com/47776346/173753526-ebd79e23-ea4a-4758-8c7b-aaff7e8b89a8.png">
+<img width="1272" alt="ogp" src="https://user-images.githubusercontent.com/47776346/230755143-775c4ac5-d298-4ded-b40b-61254433c786.jpg">
 
 ## Usage
 
