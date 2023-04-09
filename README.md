@@ -4,6 +4,8 @@
 
 <img width="1272" alt="ogp" src="https://user-images.githubusercontent.com/47776346/230755143-775c4ac5-d298-4ded-b40b-61254433c786.jpg">
 
+<img width="1272" alt="ogp" src="https://user-images.githubusercontent.com/47776346/230755183-0dbfa355-35fc-4656-84ff-004cde547445.jpg">
+
 ## Usage
 
 - Clone repository<br>
