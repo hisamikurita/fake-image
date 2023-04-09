@@ -9,9 +9,7 @@
 @import './functions/mixins';
 
 // reset
-@import './reset/sanitize';
 @import './reset/reset';
-@import './reset/sanitize-extra';
 
 //utility
 @import './utility/state';
