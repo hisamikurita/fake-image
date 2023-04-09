@@ -2,7 +2,7 @@
 import '../styles/app.scss'
 import '../components/Script.astro'
 
-const url = 'url'
+const url = 'https://hisamikurita.github.io/fake-image/'
 const title = 'fake-image'
 const description = 'fake-image using threejs'
 ---
@@ -19,12 +19,12 @@ const description = 'fake-image using threejs'
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content={title} />
-    <meta property="og:image" content={`${url}/ogp.png`} />
+    <meta property="og:image" content={`${url}ogp.png`} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href={`${url}favicon.ico`} />
+    <link rel="apple-touch-icon" href={`${url}apple-touch-icon.png`} />
   </head>
   <body>
     <slot />
